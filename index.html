@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Food Daily Multi Restaurant - Documentation by RnD TEAM</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
+  <body>
+    <section id="header">
+      <header>
+        <span class="image avatar"
+          ><img src="images/app_icon.png" alt=""
+        /></span>
+        <!--h4 id="logo"><a href="#">PHP Food Daily Admin Panel</a></h4-->
+      </header>
+      <nav id="nav">
+        <ul>
+          <li><a href="#one" class="active">Information</a></li>
+          <li><a href="#two">Installation Setups</a></li>
+          <li><a href="#three">Demo Credentials</a></li>
+          <li>
+            <a href="http://rndtechnosoft.com/" target="_blank">Support</a>
+          </li>
+        </ul>
+      </nav>
+      <footer>
+        <ul class="icons">
+          <li>
+            <a href="#" target="_blank" class="icon fa-facebook"
+              ><span class="label">Facebook</span></a
+            >
+          </li>
+          <li>
+            <a href="#" target="_blank" class="icon fa-twitter"
+              ><span class="label">Twitter</span></a
+            >
+          </li>
+          <li>
+            <a href="#" target="_blank" class="icon fa fa-linkedin"
+              ><span class="label">Instagram</span></a
+            >
+          </li>
+          <li>
+            <a href="#" target="_blank" class="icon fa fa-google-plus"
+              ><span class="label">Email</span></a
+            >
+          </li>
+        </ul>
+      </footer>
+    </section>
+    <div id="wrapper">
+      <div id="main">
+        <section id="one">
+          <div class="container">
+            <header class="major">
+              <h2>DocPortal - Hospital Management System</h2>
+            </header>
+            <div class="borderTop">
+              <div class="span-12 last">
+                <p class="prepend-top append-0">
+                  Thank you for purchasing the app. If you have any questions
+                  that are beyond the scope of this help file, please feel free
+                  to message me via my user page contact form
+                  <a href="mailto:hello@rndtechnosoft.com" style="color: #06f"
+                    >here</a
+                  >. Thank you so much!
+                </p>
+              </div>
+            </div>
+            <h4>Overview</h4>
+            <p>
+              DocPortal is a comprehensive Hospital Management System designed
+              to streamline and enhance the workflow within medical
+              environments. Built on Node.js with a Nest.js backend and a
+              Next.js frontend, it caters to four primary user roles:
+              Super-admin, Doctor, Patient, and Receptionist.
+            </p>
+            <h4>Key Features</h4>
+            <h5>Super-admin</h5>
+            <ul>
+              <li>
+                <strong>User Management: </strong>Create, Read, Update, and
+                Delete functionalities for Doctors, Patients, and Receptionists.
+              </li>
+              <li>
+                <strong>Appointment Management: </strong>Access and view
+                appointments across the system.
+              </li>
+            </ul>
+            <h5>Doctor</h5>
+            <ul>
+              <li>
+                <strong>Appointment Dashboard: </strong>Categorized lists for
+                Today's, Pending, Upcoming, Completed, and Canceled
+                appointments.
+              </li>
+              <li>
+                <strong>Patient & Receptionist Management: </strong>Access to
+                patient lists and own receptionist lists.
+              </li>
+              <li>
+                <strong>Prescription & Invoice Control: </strong>CRUD operations
+                for prescriptions and viewing capabilities for invoices.
+              </li>
+            </ul>
+            <h5>Patient</h5>
+            <ul>
+              <li>
+                <strong>Appointment Overview: </strong>View appointments with
+                doctors and manage cancellations for pending appointments.
+              </li>
+              <li>
+                <strong>Doctor Selection: </strong>Access to lists of available
+                doctors for appointments.
+              </li>
+              <li>
+                <strong>Prescription & Invoice Viewing: </strong>Access to
+                personal prescriptions and view invoices.
+              </li>
+            </ul>
+            <h5>Receptionist</h5>
+            <ul>
+              <li>
+                <strong>Appointment Management: </strong>View doctor's
+                appointments in categorized lists.
+              </li>
+              <li>
+                <strong>Patient & Doctor Interaction: </strong>Access to patient
+                lists and doctor's prescription details.
+              </li>
+              <li>
+                <strong>Prescription Management: </strong>CRUD operations for
+                prescriptions associated with assigned doctors.
+              </li>
+            </ul>
+            <h4>Role-Based Functionalities</h4>
+            <ul>
+              <li>
+                <strong>Super-admin: </strong>Complete control over user
+                management and system-wide appointment viewing.
+              </li>
+              <li>
+                <strong>Doctor: </strong>Detailed appointment management and
+                control over patient interactions, prescriptions, and invoices.
+              </li>
+              <li>
+                <strong>Patient: </strong>Access to personal appointment
+                details, doctor selection, prescriptions, and invoice viewing.
+              </li>
+              <li>
+                <strong>Receptionist: </strong>Focused on managing doctor's
+                appointments, patient interactions, and doctor-related
+                prescriptions.
+              </li>
+            </ul>
+            <h5>Purpose</h5>
+            <p>
+              DocPortal aims to streamline operations within medical facilities,
+              providing an intuitive interface for efficient appointment
+              scheduling, patient management, prescription handling, and invoice
+              tracking. It enhances communication and accessibility among
+              doctors, patients, and receptionists, ultimately optimizing the
+              healthcare workflow.
+            </p>
+            <h5>Technologies Used</h5>
+            <ul>
+              <li>Backend: Node.js, Nest.js</li>
+              <li>Frontend: Next.js</li>
+              <li>Database: MySQL</li>
+            </ul>
+          </div>
+        </section>
+        <section id="two">
+          <div class="container">
+            <h3 id="installation">Installation Steps</h3>
+            <h4>Server (Nest.js)</h4>
+            <ol>
+              <li>
+                <strong>Check PNPM Installation:</strong>
+                <pre><code>pnpm --version</code></pre>
+                <p>If PNPM is not installed:</p>
+                <pre><code>npm install -g pnpm@8.10.2</code></pre>
+              </li>
+              <li>
+                <strong>Change Directory to Server:</strong>
+                <pre><code>cd server</code></pre>
+              </li>
+              <li>
+                <strong>Setup .env file:</strong>
+                <p>Change .env.example file to .env</p>
+              </li>
+              <li>
+                <strong>Change Directory to Server:</strong>
+                <pre><code>cd server</code></pre>
+              </li>
+              <li>
+                <strong>Install Dependencies and Start Server:</strong>
+                <pre><code>pnpm install</code></pre>
+                <pre><code>pnpm start:dev</code></pre>
+              </li>
+            </ol>
+            <h4>Clinic Software - Next.js Apps</h4>
+            <ol>
+              <li>
+                <strong>Doctor App:</strong>
+                <pre><code>cd doctor</code></pre>
+                <pre><code>pnpm install</code></pre>
+                <pre><code>pnpm dev</code></pre>
+              </li>
+              <li>
+                <strong>Patient App:</strong>
+                <pre><code>cd patient</code></pre>
+                <pre><code>pnpm install</code></pre>
+                <pre><code>pnpm dev</code></pre>
+              </li>
+              <li>
+                <strong>Receptionist App:</strong>
+                <pre><code>cd receptionist</code></pre>
+                <pre><code>pnpm install</code></pre>
+                <pre><code>pnpm dev</code></pre>
+              </li>
+              <li>
+                <strong>Super Admin App:</strong>
+                <pre><code>cd super-admin</code></pre>
+                <pre><code>pnpm install</code></pre>
+                <pre><code>pnpm dev</code></pre>
+              </li>
+            </ol>
+            <h4>Reset Password - React Apps</h4>
+            <ol>
+              <li>
+                <strong>Reset Password App (Other)</strong>
+                <pre><code>cd other</code></pre>
+                <pre><code>pnpm install</code></pre>
+                <pre><code>pnpm dev</code></pre>
+              </li>
+            </ol>
+          </div>
+        </section>
+        <section>
+          <div class="container">
+            <h4>Demo Credentials</h4>
+            <ul>
+              <li>
+                <strong>Super Admin Login</strong>
+                <ul>
+                  <li>Email: admin@gmail.com</li>
+                  <li>Password: admin</li>
+                </ul>
+              </li>
+              <li>
+                <strong>Doctor Login</strong>
+                <ul>
+                  <li>Email: faizal@gmail.com</li>
+                  <li>Password: 123</li>
+                </ul>
+              </li>
+              <li>
+                <strong>Patient Login</strong>
+                <ul>
+                  <li>Email: emma.thompson@example.com</li>
+                  <li>Password: 123</li>
+                </ul>
+              </li>
+              <li>
+                <strong>Receptionist Login</strong>
+                <ul>
+                  <li>Email: sarah.johnson@example.com</li>
+                  <li>Password: 123</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section id="credits">
+          <div class="container">
+            <p class="append-bottom alt large">
+              <strong
+                ><a style="color: #06f" href="" target="_blank">Plum</a></strong
+              >
+            </p>
+            <!--p><a style="color:#06F" href="#one">Go To Table of Contents</a></p><div class="section_bdr"></div-->
+          </div>
+        </section>
+      </div>
+    </div>
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollzer.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/skel.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <!--[if lte IE 8
+      ]><script src="assets/js/ie/respond.min.js"></script
+    ><![endif]-->
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
