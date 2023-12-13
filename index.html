@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Food Daily Multi Restaurant - Documentation by RnD TEAM</title>
+    <title>ClinixPRO</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="assets/css/main.css" />
@@ -10,17 +10,17 @@
     <section id="header">
       <header>
         <span class="image avatar"
-          ><img src="images/app_icon.png" alt=""
+          ><img src="assets/svgs/app_icon.svg" alt=""
         /></span>
-        <!--h4 id="logo"><a href="#">PHP Food Daily Admin Panel</a></h4-->
       </header>
       <nav id="nav">
         <ul>
-          <li><a href="#one" class="active">Information</a></li>
-          <li><a href="#two">Installation Setups</a></li>
-          <li><a href="#three">Demo Credentials</a></li>
+          <li><a href="#information" class="active">Information</a></li>
+          <li><a href="#installation-steps">Installation Steps</a></li>
+          <li><a href="#demo-credentials">Web Demo Credentials</a></li>
+          <li><a href="#ios-setup">Ios App Setup</a></li>
           <li>
-            <a href="http://rndtechnosoft.com/" target="_blank">Support</a>
+            <a href="" target="_blank">Support</a>
           </li>
         </ul>
       </nav>
@@ -51,10 +51,10 @@
     </section>
     <div id="wrapper">
       <div id="main">
-        <section id="one">
+        <section id="information">
           <div class="container">
             <header class="major">
-              <h2>DocPortal - Hospital Management System</h2>
+              <h2>ClinixPRO - Hospital Management System</h2>
             </header>
             <div class="borderTop">
               <div class="span-12 last">
@@ -62,15 +62,13 @@
                   Thank you for purchasing the app. If you have any questions
                   that are beyond the scope of this help file, please feel free
                   to message me via my user page contact form
-                  <a href="mailto:hello@rndtechnosoft.com" style="color: #06f"
-                    >here</a
-                  >. Thank you so much!
+                  <a href="" style="color: #06f">here</a>. Thank you so much!
                 </p>
               </div>
             </div>
             <h4>Overview</h4>
             <p>
-              DocPortal is a comprehensive Hospital Management System designed
+              ClinixPRO is a comprehensive Hospital Management System designed
               to streamline and enhance the workflow within medical
               environments. Built on Node.js with a Nest.js backend and a
               Next.js frontend, it caters to four primary user roles:
@@ -156,32 +154,86 @@
             </ul>
             <h5>Purpose</h5>
             <p>
-              DocPortal aims to streamline operations within medical facilities,
+              ClinixPRO aims to streamline operations within medical facilities,
               providing an intuitive interface for efficient appointment
               scheduling, patient management, prescription handling, and invoice
               tracking. It enhances communication and accessibility among
               doctors, patients, and receptionists, ultimately optimizing the
               healthcare workflow.
             </p>
-            <h5>Technologies Used</h5>
+            <h4>Technologies Used</h4>
             <ul>
               <li>Backend: Node.js, Nest.js</li>
               <li>Frontend: Next.js</li>
               <li>Database: MySQL</li>
             </ul>
+            <ul>
+              <li>
+                <strong>Next.js Apps:</strong>
+                <ul>
+                  <li>
+                    Technologies: TypeScript, Redux, Redux Toolkit, React Hook
+                    Form, Yup, Tailwind CSS, DaisyUI, Redux Toolkit Query (RTK
+                    Query).
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <strong>Reset Password - React App:</strong>
+                <ul>
+                  <li>
+                    Technologies: React, TypeScript, Axios, React Hook Form,
+                    Yup.
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <strong>Server (Nest.js):</strong>
+                <ul>
+                  <li>Technologies: Nest.js, PNPM.</li>
+                </ul>
+              </li>
+              <li>
+                <strong>Database:</strong>
+                <ul>
+                  <li>Database System: MySQL</li>
+                </ul>
+              </li>
+            </ul>
           </div>
         </section>
-        <section id="two">
+        <section id="installation-steps">
           <div class="container">
+            <h3 id="installation">Environment Setup</h3>
+            <ol>
+              <li>
+                <strong>Node.js & pnpm Versions</strong>
+                <ul>
+                  <li>Node.js: v18.18.1 or later</li>
+                  <li>Pnpm: v8.10.2 or later</li>
+                </ul>
+              </li>
+              <li>
+                <strong>Database</strong>
+                <ul>
+                  <li>MySQL</li>
+                </ul>
+              </li>
+            </ol>
             <h3 id="installation">Installation Steps</h3>
-            <h4>Server (Nest.js)</h4>
+            <h4>pnpm Package Management</h4>
             <ol>
               <li>
                 <strong>Check PNPM Installation:</strong>
                 <pre><code>pnpm --version</code></pre>
-                <p>If PNPM is not installed:</p>
-                <pre><code>npm install -g pnpm@8.10.2</code></pre>
               </li>
+              <li>
+                <strong>If PNPM is not installed:</strong>
+                <pre><code>npm install -g pnpm</code></pre>
+              </li>
+            </ol>
+            <h4>Server (Nest.js)</h4>
+            <ol>
               <li>
                 <strong>Change Directory to Server:</strong>
                 <pre><code>cd server</code></pre>
@@ -189,10 +241,7 @@
               <li>
                 <strong>Setup .env file:</strong>
                 <p>Change .env.example file to .env</p>
-              </li>
-              <li>
-                <strong>Change Directory to Server:</strong>
-                <pre><code>cd server</code></pre>
+                <p>Full field the .env file</p>
               </li>
               <li>
                 <strong>Install Dependencies and Start Server:</strong>
@@ -238,7 +287,7 @@
             </ol>
           </div>
         </section>
-        <section>
+        <section id="demo-credentials">
           <div class="container">
             <h4>Demo Credentials</h4>
             <ul>
@@ -277,7 +326,9 @@
           <div class="container">
             <p class="append-bottom alt large">
               <strong
-                ><a style="color: #06f" href="" target="_blank">Plum</a></strong
+                ><a style="color: #862264" href="" target="_blank"
+                  >PlumInnoveters</a
+                ></strong
               >
             </p>
             <!--p><a style="color:#06F" href="#one">Go To Table of Contents</a></p><div class="section_bdr"></div-->
