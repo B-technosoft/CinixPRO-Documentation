@@ -2771,3 +2771,12 @@ input[type="button"]:disabled,
     z-index: 10002;
   }
 }
+
+
+.green-color {
+  color: #009846;
+}
+
+.image-logo {
+  width: 180px !important;
+}
