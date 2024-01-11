@@ -128,6 +128,92 @@
                     </ul>
                   </li>
                 </ol>
+                <h3 id="installation">Server Deployment</h3>
+                <ul>
+                  <li>
+                    <strong>Note :-</strong>
+                    <p>Use VPS SERVER for Deploy node js</p>
+                    <p>
+                      Recommended use
+                      <a
+                        target="_blank"
+                        href="https://www.ionos.com/servers/vps"
+                        style="color: #06f"
+                        >ionos Server</a
+                      >
+                    </p>
+                  </li>
+                </ul>
+                <ol>
+                  <li>Open your terminal and connect to your VPS using SSH:</li>
+                  <pre><code>ssh root@&lt;your_vps_ip_address&gt;</code></pre>
+                  <li>Update the package list:</li>
+                  <pre><code>sudo apt update</code></pre>
+                  <li>Install Nginx:</li>
+                  <pre><code>sudo apt install nginx -y</code></pre>
+                  <li>Install curl:</li>
+                  <pre><code>sudo apt install curl -y</code></pre>
+                  <li>Install NVM (Node Version Manager):</li>
+                  <pre><code>curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash</code></pre>
+                  <li>Reload the shell configuration:</li>
+                  <pre><code>source ~/.bashrc</code></pre>
+                  <li>Install Node.js using NVM:</li>
+                  <pre><code>nvm install --lts</code></pre>
+                  <li>Install pnpm package manager:</li>
+                  <pre><code>npm install -g pnpm</code></pre>
+                  <li>Install pm2 (Node.js process manager):</li>
+                  <pre><code>sudo npm install -g pm2</code></pre>
+                  <li>
+                    Clone projects to your server using Git in the /var/www/
+                    directory.
+                  </li>
+                  <li>
+                    Install dependencies for both the frontend and server
+                    projects.
+                  </li>
+                  <li>Build your ReactJS project in the frontend directory:</li>
+                  <pre><code>cd /var/www/&lt;project-name&gt;/frontend</code></pre>
+                  <pre><code>pnpm install</code></pre>
+                  <pre><code>pnpm build</code></pre>
+                  <li>Build your NestJS project in the server directory:</li>
+                  <pre><code>cd /var/www/&lt;project-name&gt;/server</code></pre>
+                  <pre><code>pnpm install</code></pre>
+                  <pre><code>pnpm build</code></pre>
+                  <li>Run NestJS using pm2 in the server directory:</li>
+                  <pre><code>pm2 start --name your-app pnpm -- start:prod</code></pre>
+                  <li>Create an Nginx configuration file:</li>
+                  <pre><code>sudo nano /etc/nginx/sites-available/your-app</code></pre>
+                  <li>Adjust and add the following Nginx configuration:</li>
+                  <pre><code>
+              server {
+                  listen 80;
+                  server_name your-domain.com www.your-domain.com;
+              
+                  location / {
+                      root /var/www/&lt;project-name&gt;/frontend/build;
+                      index index.html;
+                      try_files $uri $uri/ /index.html;
+                  }
+              
+                  location /server/ {
+                      proxy_pass http://127.0.0.1:3000;  # Change the port if your NestJS server runs on a different port
+                      proxy_http_version 1.1;
+                      proxy_set_header Upgrade $http_upgrade;
+                      proxy_set_header Connection 'upgrade';
+                      proxy_set_header Host $host;
+                      proxy_cache_bypass $http_upgrade;
+                  }
+              }
+                  </code></pre>
+                  <li>
+                    Create a symbolic link to enable the Nginx configuration:
+                  </li>
+                  <pre><code>sudo ln -s /etc/nginx/sites-available/your-app /etc/nginx/sites-enabled</code></pre>
+                  <li>Test the Nginx configuration:</li>
+                  <pre><code>sudo nginx -t</code></pre>
+                  <li>Restart Nginx to apply the changes:</li>
+                  <pre><code>sudo systemctl restart nginx</code></pre>
+                </ol>
               </div>
             </div>
           </div>
