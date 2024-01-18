@@ -181,6 +181,13 @@
                   <pre><code>pnpm build</code></pre>
                   <li>Run NestJS using pm2 in the server directory:</li>
                   <pre><code>pm2 start --name your-app pnpm -- start:prod</code></pre>
+                  <ul>
+                    <li>
+                      <strong>Note:</strong> Ensure to set up the
+                      <code>.env</code> file with the necessary environment
+                      variables for your NestJS application.
+                    </li>
+                  </ul>
                   <li>Create an Nginx configuration file:</li>
                   <pre><code>sudo nano /etc/nginx/sites-available/your-app</code></pre>
                   <li>Adjust and add the following Nginx configuration:</li>
