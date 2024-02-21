@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* Add CSS styles here */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #ffffff;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .header {
+      text-align: center;
+    }
+    .message {
+      margin-top: 20px;
+    }
+    .doctor-list {
+      margin-top: 20px;
+    }
+    .button {
+      display: inline-block;
+      background-color: #007BFF;
+      color: #fff;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 4px;
+    }
+
+    .capitalize{
+      text-transform: capitalize;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2 class="header">Welcome, {{receptionistName}}</h2>
+    <p>Dear {{receptionistName}},</p>
+    <div class="message">
+      <p>We are delighted to welcome you as a receptionist. Below is the list of doctors assigned to you:</p>
+    </div>
+    <ul class="doctor-list">
+      {{#each doctors}}
+        <li><span class="capitalize">{{this.firstName}} {{this.lastName}} </span>- {{this.email}} - <span class="capitalize">{{this.specialization}}</span></li>
+      {{/each}}
+    </ul>
+    <p>If you have any questions or need further assistance, please don't hesitate to contact our support team at {{supportEmail}}.</p>
+    <p>Thank you for joining our team.</p>
+    <p>Sincerely,<br>The Team</p>
+    <p>Your secret access code is: <strong>{{initialPassword}}</strong></p>
+  </div>
+</body>
+</html>
